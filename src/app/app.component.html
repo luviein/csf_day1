@@ -5,12 +5,17 @@
 <!-- child emit data to parent -->
 <div class="container">
   <div class="row">
-    <div class="col col-xs5">
+    <button class="btn btn-success" (click)="ToggleLeft()">Toggle Left Display</button>
+    <button class="btn btn-success" (click)="ToggleRight()">Toggle Right Display</button>
+  </div>
+  <div class="row">
+    <!-- hidden is property of div = property binding. means hidden = true or falsse -->
+    <div class="col col-xs5" [hidden]="leftEnable">
       <app-data-entry (numberChanged)="changedNumber($event)">
 
       </app-data-entry>
     </div>
-    <div class="col col-xs5">
+    <div class="col col-xs5" [hidden]="rightEnable">
       <!-- parent emit data to another child -->
       <app-data-display [numberInput]="updatedNumber">
 
