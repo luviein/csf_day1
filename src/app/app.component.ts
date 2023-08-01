@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'csf_01aug';
+  updatedNumber: number;
+  changedNumber(eventNumber: number) {
+    this.updatedNumber = eventNumber;
+    console.log("number received in parent: " + this.updatedNumber);
+  }
 }
