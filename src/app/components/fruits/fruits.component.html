@@ -1,5 +1,20 @@
-<p [style.font-weight]="fontWeight" [style.font-size]="fontSize">{{fruit}}</p>
+<p [style.font-weight]="fontWeight" [style.font-size]="fontSize">{{fruit1}}</p>
 <input type="text" name="name" [value]="fullName">
 <!-- button.btn.btn-sucess -->
 
 <button (click)="testClick()" class="btn btn-success">test</button>
+
+<table class="table table-primary">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fruit of fruits" >
+      <td>{{fruit.name}}</td>
+      <td>{{fruit.quantity}}</td>
+    </tr>
+  </tbody>
+</table>
