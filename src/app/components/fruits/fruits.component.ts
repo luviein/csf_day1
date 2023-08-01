@@ -26,9 +26,9 @@ export class FruitsComponent implements OnInit {
 
   //manually push to populate array above
   ngOnInit(): void {
-    this.fruits.push({name: "Mango", quantity: 10});
-    this.fruits.push({name: "Durian", quantity: 5});
-    this.fruits.push({name: "Avocado", quantity: 9});
+    this.fruits.push({name: "mango", quantity: 10});
+    this.fruits.push({name: "durian", quantity: 5});
+    this.fruits.push({name: "avocado", quantity: 9});
   }
 
 }

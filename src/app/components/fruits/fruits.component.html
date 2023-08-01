@@ -7,13 +7,17 @@
 <table class="table table-primary">
   <thead>
     <tr>
+      <th>S/N</th>
       <th>Name</th>
       <th>Quantity</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let fruit of fruits" >
-      <td>{{fruit.name}}</td>
+    <tr *ngFor="let fruit of fruits ; let i = index;">
+      <td>{{i + 1}}</td>
+      <!-- pipes used to transform values in display -->
+      <td>{{fruit.name | titlecase}}</td>
       <td>{{fruit.quantity}}</td>
     </tr>
   </tbody>
