@@ -3,7 +3,19 @@
 </app-fruits>
 
 <!-- child emit data to parent -->
+<div class="container">
+  <div class="row">
+    <div class="col col-xs5">
+      <app-data-entry (numberChanged)="changedNumber($event)">
 
-<app-data-entry (numberChanged)="changedNumber($event)">
+      </app-data-entry>
+    </div>
+    <div class="col col-xs5">
+      <!-- parent emit data to another child -->
+      <app-data-display [numberInput]="updatedNumber">
 
-</app-data-entry>
+      </app-data-display>
+    </div>
+  </div>
+</div>
+
