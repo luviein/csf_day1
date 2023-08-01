@@ -9,13 +9,14 @@
     <button class="btn btn-success" (click)="ToggleRight()">Toggle Right Display</button>
   </div>
   <div class="row">
-    <!-- hidden is property of div = property binding. means hidden = true or falsse -->
-    <div class="col col-xs5" [hidden]="leftEnable">
+    <!-- display IF true -->
+    <div class="col col-xs5" *ngIf="leftEnable">
       <app-data-entry (numberChanged)="changedNumber($event)">
 
       </app-data-entry>
     </div>
-    <div class="col col-xs5" [hidden]="rightEnable">
+        <!-- hidden is property of div = property binding. means hidden = true or falsse -->
+    <div class="col col-xs5" [hidden]="!rightEnable">
       <!-- parent emit data to another child -->
       <app-data-display [numberInput]="updatedNumber">
 
